@@ -1,0 +1,57 @@
+.navBar {
+  z-index: 9999;
+  background-color: #020304;
+  position: fixed;
+  width: 100vw;
+}
+
+.navigation-container {
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  width: 150px;
+}
+
+.logo-small {
+  height: 30px;
+  width: 35px;
+  margin: 10px 0px;
+}
+
+.companyName {
+  color: white;
+  margin-top: 15px;
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.user-icon-container {
+  display: flex;
+  float: right;
+}
+
+.user-icon {
+  color: white;
+  background-color: purple;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+.account-information-bridge {
+  position: absolute;
+  text-align: right;
+  width: 300px;
+  margin-left: -220px
+}

@@ -1,0 +1,23 @@
+.details-drawer {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 6px rgba(0,0,0,0.1);
+  transition: width 250ms ease;
+}
+
+.close-button {
+  border: 1px solid black;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin: 5px;
+  background-color: lightgrey;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.close-button:hover {
+  background-color: grey;
+}

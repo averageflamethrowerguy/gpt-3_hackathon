@@ -1,0 +1,350 @@
+.managementMetaContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 100vw;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+.table-column {
+  transition: linear 0.25s;
+}
+
+.table-column:hover {
+  background-color: #363636;
+}
+
+.table-column-dark {
+  background-color: #424242;
+}
+
+.computeResources h1,
+.organizationContainer h1,
+.organization-drawer-container h1,
+.renderOtherProducts h1 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.leftSidebar p,
+.rightSidebar p,
+.computeResources p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.organization-drawer-container p,
+.productContainer p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+
+.delete-account {
+  background-color: #1c1c1c;
+  margin: 0px -20px 0px -20px;
+  padding: 20px 20px 15px 20px;
+  text-align: center;
+  border: 2px solid red;
+  border-left: 0px transparent;
+  border-right: 0px transparent;
+}
+
+.delete-acct-btn {
+  background-color: #6e1a33;
+  padding: 3px 8px 3px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #57172a;
+}
+
+.delete-acct-btn:hover {
+  background-color: #57172a;
+}
+
+.divider {
+  width: 70%;
+  border-top: 2px solid lightgrey;
+  margin: 0px auto 10px;
+}
+
+.rightSidebar {
+  max-width: 220px;
+  flex-grow: 1;
+  margin-top: 50px;
+  padding: 0px 20px;
+  background-color: #202020;
+  color: white;
+  border-left: 2px solid #F1F1F1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightSidebar h1 {
+  background-color: #1c1c1c;
+  margin: 0px -20px 8px -20px;
+  padding: 5px 20px 5px 20px;
+  border: 2px solid lightgrey;
+  border-left: 0px transparent;
+  border-right: 0px transparent;
+}
+
+.key-resource-container {
+  display: inline-grid;
+  grid-template-columns: 7fr 1fr;
+  width: 100%;
+  cursor: pointer;
+  margin: 10px 0px;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.key-resource-container p {
+  margin: 0px;
+}
+
+.key-resource-container:hover {
+  filter: brightness(90%);
+  background-color: #17171720;
+}
+
+.middle-container {
+  padding: 15px;
+  margin-top: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  color: white;
+}
+
+.profile-change-forms {
+
+}
+
+.profile-forms-meta-wrapper {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: #ffffff10;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.profile-information-flexbox {
+  display: flex;
+}
+
+.profile-information-update-success {
+  text-align: center;
+  color: lightgreen;
+}
+
+.profile-title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.profile-information {
+  margin: 10px 10px 20px 10px;
+  font-size: 18px;
+}
+
+.profile-information-form-label {
+  margin-left: 10px;
+}
+
+.profile-information-update-button {
+  margin: 5px auto;
+  padding: 4px 7px;
+  border: 1px solid white;
+  width: fit-content;
+  border-radius: 12px;
+  transition: 0.1s linear;
+}
+
+.profile-information-update-button:hover {
+  filter: brightness(85%);
+  cursor: pointer;
+}
+
+.profile-information-meta-wrapper {
+  margin: 0px 20px 20px 20px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid white;
+}
+
+.snippet-list-container {
+  text-align: left;
+}
+
+.snippet-information {
+  line-height: 25px;
+}
+
+.snippet-information td {
+  text-wrap: break-word;
+}
+
+.snippet-name-column {
+  min-width: 200px;
+  max-width: 200px;
+}
+
+.organizationContainer {
+  border-top: 1px solid lightgrey;
+  padding-top: 25px;
+  flex-grow: 1;
+}
+
+.organizationTable {
+  width: 100%;
+}
+
+.column-element-header {
+  background-color: #383838;
+  text-align: left;
+  padding: 5px 10px;
+  max-width: 130px;
+  border-radius: 3px;
+}
+
+.column-element {
+  text-align: left;
+  padding: 0px 10px;
+  max-width: 130px;
+}
+
+.payment-plan-drawer {
+  background-color: #333333;
+  height: 100%;
+  margin-top: -30px;
+  padding-top: 30px;
+  color: white;
+}
+
+.cost {
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom:  -5px;
+}
+
+.computeResources {
+  margin-top: 20px;
+  padding: 0 20px;
+  background-color: #333333;
+  height: 100%;
+  color: white;
+  margin-top: -30px;
+  padding-top: 50px;
+}
+
+.productContainer {
+  margin: 10px;
+  padding-bottom:  20px;
+  border-bottom: 2px solid lightgrey;
+}
+
+.accessKey {
+  background-color: #333333;
+  height: 100%;
+  margin-top: -20px;
+  color: white;
+  padding: 40px 15px 0px 15px;
+}
+
+.accessKey h1 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.access-key-input-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.access-key-input-field {
+  width: 60%;
+}
+
+.access-key-btn {
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 8px;
+  height: fit-content;
+  padding: 3px 4px;
+  margin-top: 4px;
+}
+
+.access-key-btn:hover {
+  filter: brightness(80%);
+}
+
+.subscribe-btn {
+  border: 2px solid red;
+  background: linear-gradient(
+    135deg,
+    rgb(49, 0, 62) 0%,
+    rgb(195, 40, 110) 100%
+  );
+  color: white;
+  border-radius: 25px;
+  padding: 7px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.open-drawer-btn {
+  background-color: lightgrey;
+  cursor: pointer;
+  width: 60%;
+  padding: 4px 10px;
+  border: 2px solid #F1F1F1;
+  border-radius: 15px;
+  color: black;
+}
+
+.open-drawer-btn:hover {
+  background-color: #828282;
+}
+
+.renderOtherProducts {
+
+}
+
+.other-plans {
+  margin-left: 20px;
+}
+
+.product-name {
+  margin-left: 15px;
+}
+
+.potential-plan {
+  padding: 0px 20px 0px 20px;
+  font-size: 14px;
+}
+
+.organization-drawer-container {
+  margin: 10px;
+  padding-bottom:  20px;
+  background-color: #333333;
+  color: white;
+  margin-top: -20px;
+  margin-left: 0px;
+  padding: 20px;
+  padding-top: 40px;
+  height: 100%;
+}
+
+.organization-delete-button {
+  text-decoration: underline;
+  cursor: pointer;
+}

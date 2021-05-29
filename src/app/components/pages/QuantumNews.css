@@ -1,0 +1,29 @@
+.quantum-news {
+  display: flex;
+  background-color: #1F0858;
+}
+
+.quantum-news-meta-container {
+  width: 100%
+}
+
+.quantum-news-left-container {
+  background-color: #202020;
+  min-height: 100vh;
+  width: fit-content;
+}
+
+.quantum-news-container {
+  background-color: #1F0858;
+  padding: 10px;
+  text-align: center;
+}
+
+.news-grid {
+  display: flex;
+  width: 100%;
+  padding: 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

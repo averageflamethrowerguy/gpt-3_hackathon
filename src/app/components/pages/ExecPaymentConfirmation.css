@@ -1,0 +1,42 @@
+.exec-payment-confirmation {
+  color: #333;
+  width: 600px !important;
+  max-width: unset !important;
+  margin: auto;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.exec-payment-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.exec-payment-label {
+  text-align: center;
+  font-size: 16px;
+  color: gray;
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.accounts-sections {
+
+}
+
+.accounts-section {
+  position: relative;
+  width: 340px;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+  background: #eee;
+  box-shadow: 0 1px 4px -2px #555;
+  padding: 0 10px 60px;
+  border-radius: 10px;
+  box-sizing: content-box!important;
+}

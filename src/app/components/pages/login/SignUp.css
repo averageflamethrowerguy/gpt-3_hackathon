@@ -1,0 +1,112 @@
+.toc-checkbox {
+  width: 15px;
+  margin: 10px;
+  height: 15px;
+}
+
+.toc-text {
+  position: relative;
+  top: -2px;
+  padding-left: 20px;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-color: #222324;
+}
+
+.createPortal {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 0) !important;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  background-color: #341548;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.logoText {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 20px auto;
+  padding-top: 20px;
+  text-align: center;
+  user-select: none;
+  color: white;
+}
+
+.loginField {
+  display: block;
+  height: 32px;
+  margin: 25px auto;
+  width: 240px;
+  font-size: 18px;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  border-bottom: 2px solid white;
+  outline: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.passwordMessageInvalid {
+  color: red;
+}
+
+.passwordMessageValid {
+  color: green;
+}
+
+.termsConditionsText {
+  color: white;
+  margin: 20px;
+  font-size: 14px;
+}
+
+.termsConditionsLink {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.errorMessage {
+  color: red;
+}
+
+
+.successMessage {
+  color: green;
+}
+
+.createSubmit {
+  display: block;
+  position: relative;
+  margin: 30px auto;
+  padding-bottom: 30px;
+  width: 90%;
+  max-width: 150px;
+  height: 32px;
+  font-size: 16px;
+  color: white;
+  font-weight: 800;
+  background-color: #222324;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.createSubmit:hover {
+  background-color: black;
+}
+
+.spacer {
+  height: 50px;
+  color: transparent;
+}
