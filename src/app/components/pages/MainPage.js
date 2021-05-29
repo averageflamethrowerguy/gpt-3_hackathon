@@ -6,7 +6,7 @@ import logo from '../../../assets/img/logo.png'
 import './MainPage.css'
 
 
-import regexCache from '../gtp3-utility-caches/regex-cache'
+import regexCache from '../gpt3-utility-caches/regex-cache'
 // END IMPORT SECTION
 
 
