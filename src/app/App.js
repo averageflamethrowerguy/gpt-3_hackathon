@@ -3,14 +3,10 @@ import React from 'react'
 import contextTypes from './contextTypes'
 
 import Link from './components/partials/Link'
-import Login from './components/pages/login/Login'
+import Login from './components/pages/Login'
 import Overlay from './components/partials/Overlay'
-import TopBar from './components/partials/TopBar'
 import logo from '../assets/img/logo.png'
 import './App.css'
-
-import ErrorBoundary from './ErrorBoundary'
-import PageError from './PageError'
 
 class App extends React.Component {
 
@@ -111,14 +107,6 @@ class App extends React.Component {
     document.title = this.props.app.getStore('NavigationStore').getState().title || 'qBraid Admin'
   }
 
-  renderErrorMessageUI = (error, errorInfo) => {
-    return (
-      <div className='page-error-wrapper'>
-        <PageError error={error} errorInfo={errorInfo} />
-      </div>
-    )
-  }
-
   render() {
     if (this.state.navigationError) {
       return (
@@ -147,13 +135,10 @@ class App extends React.Component {
     }
     return (
       <div>
-        <TopBar />
         <div style={{ opacity: this.state.loaded ? 1 : 0, transition: 'opacity .25s ease-in'}}>
           {this.state.overlay && <Overlay backgroundStyle={this.state.overlayBackgroundStyle} onBackgroundClick={this.state.onOverlayBackgroundClick}>{this.state.overlay}</Overlay>}
 
-          <ErrorBoundary errorMessageUI={this.renderErrorMessageUI}>
             <Page params={this.state.params} />
-          </ErrorBoundary>
         </div>
       </div>
     )

@@ -1,10 +1,10 @@
 import React from 'react'
 import posed, { PoseGroup } from 'react-pose'
 
-import Link from '../../partials/Link'
+import Link from '../partials/Link'
 
-import contextTypes from '../../../contextTypes'
-import logo from '../../../../assets/img/logo.png'
+import contextTypes from '../../contextTypes'
+import logo from '../../../assets/img/logo.png'
 
 import './Login.css'
 
