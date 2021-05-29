@@ -4,7 +4,11 @@ import Link from '../partials/Link'
 import contextTypes from '../../contextTypes'
 import logo from '../../../assets/img/logo.png'
 import './MainPage.css'
+
+
+import regexCache from '../gtp3-utility-caches/regex-cache'
 // END IMPORT SECTION
+
 
 export default class MainPage extends React.Component {
 
@@ -15,11 +19,12 @@ export default class MainPage extends React.Component {
     this.state = {
     // BEGIN STATE VARIABLES
 
-      mode: 'standard',
+      mode: 'regex',
       modeOptions: new Map([
-        ['standard', {modeFunction: this.handleStandardSubmit}]
+        ['standard', {modeFunction: null, prompt: '', seed: ''}],
+        ['regex', {modeFunction: this.handleRegexFunction, prompt: regexCache.prompt, seed: regexCache.seed}]
       ]),
-      tokens: 20,
+      tokens: 100,
       // davichi is the most powerful
       machineName: '',
 
@@ -39,26 +44,40 @@ export default class MainPage extends React.Component {
   // BEGIN ONCHANGE HANDLERS
   handleChangeInput = (e) => this.setState({input: e.target.value})
 
-  handleStandardSubmit = () => {
-    let { tokens, machineName, input } = this.state
+  handleChangeMode = (mode) => this.setState({mode})
 
-    if (!input) {
+  handleStandardSubmit = () => {
+    let { tokens, machineName, input, modeOptions, mode } = this.state
+
+    if (!input && !(modeOptions.get(mode) && modeOptions.get(mode).seed)) {
       console.log('Must specify an input')
       return
     }
 
+    if (modeOptions.get(mode)) {
+      if (modeOptions.get(mode).seed) {
+        input = modeOptions.get(mode).seed + input
+      }
+    }
+
     this.setState({loading: true})
 
-    this.context.getActions('GPTActions').handleStandardSubmit({
+    this.context.getActions('GPTActions').handleSubmit({
       tokens,
       input,
-      machineName: machineName || 'davichi',
+      machineName: machineName || 'davinci',
     }).then((response) => {
       console.log(response)
       this.setState({output: response})
+
+      this.state.modeOptions.get(this.state.mode).modeFunction && this.state.modeOptions.get(this.state.mode).modeFunction(response)
     })
     .catch(err => console.log(err))
     .finally(() => this.setState({loading: false}))
+  }
+
+  handleRegexFunction = (response) => {
+
   }
   // END ONCHANGE HANDLERS
 
@@ -81,7 +100,7 @@ export default class MainPage extends React.Component {
             {
               [...this.state.modeOptions].map(([modeName, {modeFunction}], modeIndex) => {
                 return (
-                  <div className='input-mode-choice' onClick={modeFunction} key={modeIndex}>
+                  <div className={`input-mode-choice ${modeName == this.state.mode && 'input-mode-selected'}`} onClick={modeFunction} key={modeIndex}>
                     {modeName}
                   </div>
                 )
@@ -91,8 +110,10 @@ export default class MainPage extends React.Component {
 
           <div className='input-wrapper'>
             <p className='input-title'>Write prompt here</p>
-            <textarea onChange={this.handleChangeInput} className='input-area' />
-            <div className='input-run-button' onClick={this.state.modeOptions.get(this.state.mode).modeFunction}>
+            <textarea onChange={this.handleChangeInput}
+                      className='input-area'
+                      defaultValue={this.state.modeOptions.get(this.state.mode).prompt} />
+            <div className='input-run-button' onClick={this.handleStandardSubmit}>
               Run this query
             </div>
           </div>
@@ -102,12 +123,16 @@ export default class MainPage extends React.Component {
           this.loading ?
             this.renderLoadingSpinner()
           :
-          this.output ?
+          this.state.output ?
             <div className='output-container'>
               <div className='raw-output-container'>
                 <p className='raw-output-title'>Raw Output</p>
                 <div className='raw-output'>
-                  { JSON.stringify(this.state.output) }
+                  {
+                    this.state.output.choices[0].text.split('\n').map((line, lineNumber) => {
+                      return <div className='output-line' key={lineNumber}>{line}</div>
+                    })
+                  }
                 </div>
               </div>
             </div>

@@ -6,6 +6,7 @@ import ApiActions from './actions/ApiActions';
 import AuthActions from './actions/AuthActions';
 import NavigationActions from './actions/NavigationActions';
 import OverlayActions from './actions/OverlayActions';
+import GPTActions from './actions/GPTActions'
 
 import AuthStore from './stores/AuthStore';
 import NavigationStore from './stores/NavigationStore';
@@ -24,6 +25,7 @@ class Flux extends Alt {
     this.addActions('AuthActions', AuthActions);
     this.addActions('NavigationActions', NavigationActions);
     this.addActions('OverlayActions', OverlayActions);
+    this.addActions('GPTActions', GPTActions);
 
     this.registerAltWithActions()
 

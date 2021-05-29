@@ -11,6 +11,20 @@
   text-align: center;
 }
 
+.input-mode-choice-list {
+  display: flex;
+  justify-content: center;
+}
+
+.input-mode-choice {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.input-mode-selected {
+  font-weight: bold;
+}
+
 .input-area {
   width: 500px;
   height: 400px;
